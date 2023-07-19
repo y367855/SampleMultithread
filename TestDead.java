@@ -7,11 +7,13 @@ public class TestDead {
 
         testXxx.testYyy = testYyy;
         testYyy.testXxx = testXxx;
-
+       
         ThreadXXX tx = new ThreadXXX(testXxx);
+        
         ThreadYYY ty = new ThreadYYY(testYyy);
-
+        //threadXXXは、メソッドx1を実行後、メソッドy2を呼ぶ
         tx.start();
+        //threadYYYは、メソッドx2を実行しようとx1が実行完了するまで待っている
         ty.start();
 
         try {

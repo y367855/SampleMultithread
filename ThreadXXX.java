@@ -4,7 +4,7 @@ public class ThreadXXX extends Thread {
     ThreadXXX(TestXXX testXxx){
         this.testXxx = testXxx;
     }
-
+    //カウントアップする
     public void run() {
         for(int i = 0; i < 100000; i++) {
             testXxx.testX1();
